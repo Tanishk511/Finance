@@ -1,0 +1,315 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #b9e9fc21;
+
+}
+
+nav {
+    width: 95vw;
+    color: white;
+}
+
+.navbar {
+    position: fixed;
+    width: 95vw;
+    display: flex;
+    font-family: cursive;
+    justify-content: space-between;
+    font-family: 'Dongle', sans-serif;
+    font-size: 1.85rem;
+}
+
+.navbar-title {
+    flex: 2;
+}
+
+.navbar-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    transition: 500ms;
+}
+
+.navbar-content span:hover {
+    color: green;
+}
+
+.head {
+    padding: 8% 5%;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+}
+
+.head-title {
+    margin-top: 5%;
+    font-family: 'Orbitron', sans-serif;
+
+}
+
+.head-btns {
+    margin: 1% 0;
+    display: flex;
+    width: 35vw;
+    justify-content: space-evenly;
+}
+
+.head-btns button {
+    padding: 15px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    background-color: white;
+    transition: 800ms;
+
+}
+
+.head-btns button:hover {
+    transform: scale(1.12);
+    box-shadow: #395144 0px 5px 15px;
+
+}
+
+.head-btns img {
+    width: 25px;
+}
+
+.head-btns p {
+    font-size: 1rem;
+    margin: 1%;
+    text-align: center;
+}
+
+.chart-wrapper {
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    height: 65vh;
+    width: 90vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+    padding: 0% 15%;
+
+}
+
+.features>div {
+    min-width: 25vw;
+    font-family: 'Chivo Mono', monospace;
+    height: auto;
+    margin-right: 3%;
+    background-color: white;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+    padding: 0% 3%;
+    transform: translateY(-20%);
+}
+
+.features-preview>p {
+    font-size: 1.35rem;
+    /*   border-bottom: 1px solid white; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.455);
+    padding: 2%;
+}
+
+.features-preview>div {
+    font-family: 'Dongle', sans-serif;
+    font-size: 1rem;
+}
+
+.features-preview>div p {
+    margin: 0;
+}
+
+.features-preview .preview-box {
+    padding: 3%;
+}
+
+.preview-box {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+    /* border-bottom: 1px solid white; */
+
+    font-family: 'Chivo Mono', monospace;
+    padding: 1% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.preview-box img {
+    width: 20px;
+    background-color: rgba(255, 0, 0, 0.277);
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.preview-box p:nth-child(2) {
+    margin-left: 1%;
+    flex: 2;
+
+}
+
+.preview-box p:nth-child(3) {
+    color: green;
+    flex: 1;
+}
+
+.preview-box p:nth-child(4) {
+    font-weight: bold;
+}
+
+.debt img {
+    background-color: rgba(0, 0, 0, 0.415);
+}
+
+.transactions {
+    margin: auto;
+    padding: 1% 0%;
+    background-color: white;
+    width: 90vw;
+    margin-bottom: 2%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 15px;
+
+
+}
+
+.transactions-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 1%;
+    margin: 0 3%;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+    font-size: 1.3rem;
+    font-family: 'Chivo Mono', monospace;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+
+
+}
+
+.transactions-head-title {
+    flex: 1;
+    width: 85vw;
+
+}
+
+.transactions-head button {
+    padding: 0.5% 2%;
+    margin-left: 1%;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    background-color: white;
+    font-weight: 600;
+    font-family: 'Chivo Mono', monospace;
+    transition: 500ms;
+}
+
+.transactions-head button:hover {
+    background-color: black;
+    color: white;
+}
+
+.transactions-body {
+    display: flex;
+    font-size: 0.9rem;
+    padding: 0 1%;
+    width: 85vw;
+
+
+}
+
+.transactions-body>div {
+    display: none;
+    flex: 1;
+    transition: 500ms;
+}
+
+.transactions-body>div:nth-child(1) {
+    display: block;
+}
+
+.transactions-body img {
+    padding: 0.5%;
+}
+
+.transactions-body .preview-box {
+    padding: 0.5% 1%;
+}
+
+.transactions-body .plus {
+    background-color:  #BEF0CB;
+}
+
+.transactions-body .minus {
+    background-color: rgba(255, 0, 0, 0.277);
+
+}
+
+.add-transactions {
+    display: none;
+    position: absolute;
+    top: 110vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 15px;
+    padding: 2%;
+    z-index: 5;
+}
+
+.popupScreen {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+}
+
+.add-transactions form {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.add-transactions label {
+    position: absolute;
+    transform: translate(8px);
+    background-color: white;
+}
+
+.add-transactions form input {
+    margin: 3%;
+    padding: 2%;
+}
+
+.add-transactions form select {
+    margin: 3%;
+    padding: 2%;
+
+}

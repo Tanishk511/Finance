@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main/main.css">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="navbar-title">&hearts;</div>
+            <div class="navbar-content">
+                <span data-id="main">Main</span> <span data-id="home">Home</span><span data-id="about">AboutUs</span>
+                <span data-id="service">Services</span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="head">
+        <div class="head-title">Welcome <%=data.name%>
+        </div>
+    </section>
+
+
+    <section class="features">
+
+        <div class="features-preview">
+            <p>Latest Expense record :</p>
+            <div>
+                <% for(let i=0;i<expenses.length && i<5;i++) { %>
+                    <div class="preview-box">
+                        <img src="/main/circle-minus.svg" alt="minus">
+                        <p>
+                            <%= Object.keys(expenses[i])[0]%>
+                        </p>
+                        <p>
+                            <%= Object.values(expenses[i])[0]%>
+                        </p>
+                        <p>
+                            <%= Object.values(expensesDates[i])[0]%>
+                        </p>
+                    </div>
+                    <% }%>
+            </div>
+        </div>
+        <div class="features-preview">
+            <p>Bills :</p>
+            <div>
+                <% for(let i=0;i<debt.length && i<5;i++) { %>
+                    <div class="preview-box debt">
+                        <img src="/main/coin.svg" alt="coin">
+                        <p>
+                            <%= Object.keys(debt[i])[0]%>
+                        </p>
+                        <p>
+                            <%= Object.values(debt[i])[0]%>
+                        </p>
+                        <p>
+                            <%= debtDates[i]%>
+                        </p>
+                    </div>
+                    <% }%>
+            </div>
+        </div>
+    </section>
+    <section class="transactions">
+        <div class="transactions-head">
+            <div class="transactions-head-title"> Transactions</div>
+
+            <button class="allBtn">All</button>
+            <button class="incomeBtn">Income</button>
+            <button class="expenseBtn">Expense</button>
+            <button>Debt</button>
+            <button class="popupBtn">Add</button>
+
+        </div>
+        <div class="transactions-body">
+
+            <div>
+                <% for(let i=0;i<all.length ;i++) { %>
+                    <div class="preview-box">
+                        <% if (Object.values(trackerNature[i])[0]=="expense" ) {%>
+                            <img src="/main/circle-minus.svg" alt="circle-minus" class="minus">
+                            <% }else{%>
+                                <img src="/main/circle-plus.svg" alt="circle-plus" class="plus">
+                                <% } %>
+                                    <p>
+                                        <%= Object.keys(all[i])[0]%>
+                                    </p>
+                                    <p>
+                                        Rs <%= Object.values(all[i])[0]%>
+                                    </p>
+                                    <p>
+                                        <%= Object.values(allDates[i])[0]%>
+                                    </p>
+                    </div>
+                    <% }%>
+            </div>
+            <div>
+                <% for(let i=0;i<incomes.length ;i++) { %>
+                    <div class="preview-box">
+                        <img src="/main/circle-plus.svg" alt="circle-plus" class="plus">
+
+                        <p>
+                            <%= Object.keys(incomes[i])[0]%>
+                        </p>
+                        <p>
+                            Rs <%= Object.values(incomes[i])[0]%>
+                        </p>
+                        <p>
+                            <%= Object.values(incomeDates[i])[0]%>
+                        </p>
+                    </div>
+                    <% }%>
+            </div>
+            <div>
+                <% for(let i=0;i<expenses.length ;i++) { %>
+                    <div class="preview-box">
+                        <img src="/main/circle-minus.svg" alt="minus" class="minus">
+                        <p>
+                            <%= Object.keys(expenses[i])[0]%>
+                        </p>
+                        <p>
+                            Rs <%= Object.values(expenses[i])[0]%>
+                        </p>
+                        <p>
+                            <%= Object.values(expensesDates[i])[0]%>
+                        </p>
+                    </div>
+                    <% }%>
+            </div>
+        </div>
+        <div class="popupScreen"></div>
+        <div class="add-transactions">
+            <div class="add-transactions-handle">
+                <span>New Transaction</span>
+                <button class="popoutBtn">-</button>
+            </div>
+            <form method="post">
+                <div>
+                    <label for="description">Title</label>
+                    <input type="text" name="description" required>
+                </div>
+                <div>
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" required>
+                </div>
+                <div>
+                    <label for="date">Date</label>
+                    <input type="date" name="date" required>
+                </div>
+                <div>
+                    <label for="nature">Nature</label>
+                    <select name="nature" id="nature">
+                        <option value="expense">Expense</option>
+                        <option value="income">Income</option>
+                    </select>
+                </div>
+                <button>Add</button>
+            </form>
+
+
+        </div>
+    </section>
+    <div class="chart-wrapper">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/main/chart.js">  </script>
+    <script src="/main/main.js"></script>
+</body>
+
+</html>
